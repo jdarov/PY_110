@@ -66,7 +66,7 @@ py110/
 ## 📅 Status
 
 > Currently working through: **Functional Programming & Decorators**  
-> Target finish date for full PY110: **[insert your date goal here]**
+> Target finish date for full PY110: **[June 7, 2025]**
 
 ---
 
@@ -75,7 +75,7 @@ py110/
 Follow my journey from trucking to tech:
 - GitHub: [github.com/jdarov](https://github.com/jdarov)
 - YouTube: **Jdarov | From Diesel to Debugging**
-- LinkedIn: *Coming soon…*
+- LinkedIn: *https://www.linkedin.com/in/joshua-darovitz*
 
 ---
 
