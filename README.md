@@ -1,84 +1,114 @@
-# 🧠 PY110: Advanced Python Concepts
+# PY110: Advanced Python Concepts
 
-Welcome to **PY110 – Advanced Python**, the next step in my journey from diesel to debugging. This repo contains all my notes, exercises, and practice problems as I dive deeper into Python's advanced features and best practices.
+Welcome to PY110 – Advanced Python, the next step in my journey from diesel to debugging. This repo contains all my notes, exercises, and practice problems as I dive deeper into Python's advanced features and best practices.
 
 ---
 
-## 🚀 Topics Covered
+## 🧠 Topics Covered
 
 This phase focuses on leveling up beyond the basics, including:
 
-- **Function Internals**  
-  - `*args`, `**kwargs`, unpacking patterns  
-  - Default arguments and their traps  
-- **First-Class Functions & Functional Programming**  
-  - Higher-order functions (`map`, `filter`, `reduce`, `lambda`)  
-  - Closures, scopes, and the LEGB rule  
-- **Decorators & Generator Functions**  
-  - Creating and applying decorators  
-  - Lazy evaluation, yield, and generator pipelines  
-- **Object-Oriented Deep Dive**  
-  - Dunder methods, custom classes  
-  - Inheritance, mixins, and method resolution order (MRO)  
-- **Namespaces & Variable Scope**  
-  - Globals, locals, shadowing, and scope resolution  
-- **Comprehensions & Advanced Iteration**  
-  - Nested comprehensions, dictionary/set/list builds  
-- **Error Handling Mastery**  
-  - Custom exceptions, try/except/finally patterns  
-- **Module Design & Import Mechanics**  
-  - `__name__ == "__main__"`, relative vs absolute imports  
-- **Intro to Testing**  
-  - `unittest`, `doctest`, test-driven mini-examples
+- **Function Internals**
+  - `*args`, `**kwargs`, unpacking patterns
+  - Default arguments and their traps
+- **First-Class Functions & Functional Programming**
+  - Higher-order functions (`map`, `filter`, `reduce`, `lambda`)
+  - Closures, scopes, and the LEGB rule
+- **Decorators & Generator Functions**
+  - Creating and applying decorators
+  - Lazy evaluation, `yield`, and generator pipelines
+- **Object-Oriented Deep Dive**
+  - Dunder methods, custom classes, and inheritance
+  - Encapsulation, polymorphism, and composition
+- **Data Structures & Algorithms**
+  - Lists, dictionaries, sets, and tuples
+  - Searching, sorting, and recursion
+- **Error Handling & Testing**
+  - Try/except blocks, custom exceptions
+  - Writing unit tests with `unittest` and `pytest`
+- **File I/O & Context Managers**
+  - Reading from and writing to files
+  - Using `with` statements for resource management
 
 ---
 
 ## 📁 Directory Structure
 
-Each directory contains a curated set of problems by difficulty, tied to the topics above.
-
 ```plaintext
-py110/
-│
-├── notes/                  # Concept breakdowns & examples
-│
-├── exercises/              # Instructor-provided practice sets
-│
-├── easy_problems/          # Warmups & fundamentals practice
-│
-├── medium_problems/        # Slightly tricky logic and design puzzles
-│
-├── hard_problems/          # Real brain busters, edge cases galore
-│
-└── projects/               # Small-scale advanced Python projects
+PY_110/
+├── exercises/
+│   ├── Easy_1/
+│   │   ├── string_to_integer.py
+│   │   ├── integer_to_string.py
+│   │   ├── signed_integer_to_string.py
+│   │   ├── string_to_signed_integer.py
+│   │   ├── word_sizes.py
+│   │   ├── swap.py
+│   │   ├── running_total.py
+│   │   └── search.py
+│   └── ...
+├── lesson_1/
+│   ├── notes.md
+│   └── examples.py
+├── .gitignore
+└── README.md
 ```
 
 ---
 
-## 🧰 How I’m Using This Repo
+## 📝 Recent Additions
 
-- **Study & Review:** Every topic is reinforced with notes and breakdowns in `notes/`
-- **Hands-on Coding:** I’m solving exercises progressively from easy to hard
-- **Reflection & Growth:** Comments inside code files will show not just *what* the solution is, but *why* I chose it
+Here are some of the latest exercises and utilities added:
 
----
+- **String and Integer Conversions**
+  - `string_to_integer.py`: Converts a numeric string to an integer without using `int()`.
+  - `integer_to_string.py`: Converts an integer to a string without using `str()`.
+  - `signed_integer_to_string.py`: Handles signed integers for conversion to strings.
+  - `string_to_signed_integer.py`: Parses signed numeric strings into integers.
 
-## 📅 Status
+- **String Manipulation**
+  - `word_sizes.py`: Calculates the frequency of word lengths in a given string.
+  - `swap.py`: Swaps the first and last characters of each word in a string.
 
-> Currently working through: **Functional Programming & Decorators**  
-> Target finish date for full PY110: **[June 7, 2025]**
-
----
-
-## 🤝 Connect With Me
-
-Follow my journey from trucking to tech:
-- GitHub: [github.com/jdarov](https://github.com/jdarov)
-- YouTube: **Jdarov | From Diesel to Debugging**
-- LinkedIn: *https://www.linkedin.com/in/joshua-darovitz*
+- **List Operations**
+  - `running_total.py`: Computes the running total of a list of numbers.
+  - `search.py`: Checks if a number exists within a list.
 
 ---
 
-*“In the middle of difficulty lies opportunity.” – Albert Einstein*
+## 🚀 Getting Started
+
+To run any of the exercises:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/jdarov/PY_110.git
+   ```
+2. Navigate to the desired directory:
+   ```bash
+   cd PY_110/exercises/Easy_1
+   ```
+3. Run the Python script:
+   ```bash
+   python3 script_name.py
+   ```
 
 ---
+
+## 📚 Resources
+
+- [Python Official Documentation](https://docs.python.org/3/)
+- [Real Python Tutorials](https://realpython.com/)
+- [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! If you have suggestions or improvements, feel free to fork the repository and submit a pull request.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
