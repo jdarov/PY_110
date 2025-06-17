@@ -1,6 +1,6 @@
 # PY110: Advanced Python Concepts
 
-Welcome to PY110 – Advanced Python, the next step in my journey from diesel to debugging. This repo contains all my notes, exercises, and practice problems as I dive deeper into Python's advanced features and best practices.
+Welcome to PY110 – Advanced Python, the next step in my journey from diesel to debugging. This repo contains all my notes, exercises, and practice problems as I dive deeper into Python's advanced features and best practices. Adding this line here to update my README
 
 ---
 
