@@ -38,18 +38,15 @@ This phase focuses on leveling up beyond the basics, including:
 PY_110/
 ├── exercises/
 │   ├── Easy_1/
-│   │   ├── string_to_integer.py
-│   │   ├── integer_to_string.py
-│   │   ├── signed_integer_to_string.py
-│   │   ├── string_to_signed_integer.py
-│   │   ├── word_sizes.py
-│   │   ├── swap.py
-│   │   ├── running_total.py
-│   │   └── search.py
-│   └── ...
+│   ├── Easy_2/
+│   ├── Easy_3/
+│   ├── Easy_4/
+│   ├── Easy_5/
 ├── lesson_1/
 │   ├── notes.md
 │   └── examples.py
+├── lesson_2/
+├── lesson_3/
 ├── .gitignore
 └── README.md
 ```
@@ -58,21 +55,67 @@ PY_110/
 
 ## 📝 Recent Additions
 
-Here are some of the latest exercises and utilities added:
+Here are the current challenges I’ve completed across difficulty tiers:
 
-- **String and Integer Conversions**
-  - `string_to_integer.py`: Converts a numeric string to an integer without using `int()`.
-  - `integer_to_string.py`: Converts an integer to a string without using `str()`.
-  - `signed_integer_to_string.py`: Handles signed integers for conversion to strings.
-  - `string_to_signed_integer.py`: Parses signed numeric strings into integers.
+🔹 **Easy 1**  
+integer_to_string.py  
+is_palindrome.py  
+letter_counter.py  
+letter_swap.py  
+running_totals.py  
+searching_for.py  
+string_to_int.py  
 
-- **String Manipulation**
-  - `word_sizes.py`: Calculates the frequency of word lengths in a given string.
-  - `swap.py`: Swaps the first and last characters of each word in a string.
+🔹 **Easy 2**  
+average.py  
+count_occurrences.py  
+digit_list.py  
+dms.py  
+find_dup.py  
+halvsies.py  
+interleave.py  
+multiplicative_average.py  
+multiply_list.py  
+union.py  
 
-- **List Operations**
-  - `running_total.py`: Computes the running total of a list of numbers.
-  - `search.py`: Checks if a number exists within a list.
+🔹 **Easy 3**  
+2_after_midnight.py  
+after_midnight.py  
+counting_up.py  
+double_char.py  
+double_cons.py  
+is_balanced.py  
+name_swapping.py  
+practice_problem.py  
+problem_solved.py  
+reverse_list.py  
+reverse_number.py  
+sequence_counting.py  
+upper_lower.py  
+
+🔹 **Easy 4**  
+all_substrings.py  
+alphabetic_sort.py  
+intersection.py  
+is_item_available.py  
+leading_substrings.py  
+merge_sets.py  
+order_by_value.py  
+palindromes.py  
+transactions_for.py  
+unique_from_first.py  
+
+🔹 **Easy 5**  
+invert_dict.py  
+keep_keys.py  
+multiply_items.py  
+remove_vowels.py  
+staggered_case.py  
+staggered_case_part_2.py  
+sum_digits.py  
+sum_of_sums.py  
+unique_sequence.py  
+word_lengths.py  
 
 ---
 
@@ -81,17 +124,22 @@ Here are some of the latest exercises and utilities added:
 To run any of the exercises:
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/jdarov/PY_110.git
-   ```
+
+```bash
+git clone https://github.com/jdarov/PY_110.git
+```
+
 2. Navigate to the desired directory:
-   ```bash
-   cd PY_110/exercises/Easy_1
-   ```
+
+```bash
+cd PY_110/exercises/Easy_1
+```
+
 3. Run the Python script:
-   ```bash
-   python3 script_name.py
-   ```
+
+```bash
+python3 script_name.py
+```
 
 ---
 
@@ -108,7 +156,3 @@ To run any of the exercises:
 Contributions are welcome! If you have suggestions or improvements, feel free to fork the repository and submit a pull request.
 
 ---
-
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
