@@ -9,11 +9,12 @@ The player can ether hit or stay
 and the game continues until the player decides to stay
 or exceeds a score of TARGET_SCORE.
 """
+import time
 import os
 import random
 
 MATCH_WIN_COUNT = 5
-
+PAUSE_TIME = 1
 TARGET_SCORE = 21
 DEALER_MIN_HIT = 17
 
@@ -76,9 +77,9 @@ def total(cards):
 
     return sum_val
 
-def busted(total_score):
+def is_busted(total_score):
     """
-    Checks if a hand of cards is busted (total value exceeds TARGET_SCORE).
+    Checks if the total score exceeds the TARGET_SCORE.
     PARAM: cards: A list of cards in the format 'value+suit'.
     RETURNS: True if the total value exceeds TARGET_SCORE, False otherwise.
     """
@@ -93,9 +94,9 @@ def detect_result(dealer_total, player_total):
     RETURNS: A string indicating the result of the game.
     """
     if player_total > TARGET_SCORE:
-        return 'PLAYER_BUSTED'
+        return 'PLAYER_is_busted'
     if dealer_total > TARGET_SCORE:
-        return 'DEALER_BUSTED'
+        return 'DEALER_is_busted'
     if dealer_total < player_total:
         return 'PLAYER'
     if dealer_total > player_total:
@@ -111,10 +112,10 @@ def display_results(dealer_total, player_total):
     result = detect_result(dealer_total, player_total)
 
     match result:
-        case 'PLAYER_BUSTED':
-            prompt('You busted! Dealer wins!')
-        case 'DEALER_BUSTED':
-            prompt('Dealer busted! You win!')
+        case 'PLAYER_is_busted':
+            prompt('You BUSTED! Dealer wins!')
+        case 'DEALER_is_busted':
+            prompt('Dealer BUSTED! You win!')
         case 'PLAYER':
             prompt('You win!')
         case 'DEALER':
@@ -164,8 +165,8 @@ def player_turn(deck, player_cards):
             current_total = total(player_cards)
             prompt(f"Your cards: {hand(player_cards)}")
             prompt(f"Your total: {current_total}")
-            if busted(current_total):
-                prompt("You're busted!")
+            if is_busted(current_total):
+                prompt("You're BUSTED!")
                 return False, current_total
         elif choice in STAY_RESPONSES:
             current_total = total(player_cards)
@@ -207,12 +208,10 @@ def show_end_of_round(dealer_cards, player_cards, dealer_total, player_total):
 
 def play_twenty_one():
     """
-    Runs the main loop for the game of Twenty-One (Blackjack).
-    The game continues until either the player or dealer wins
-    Keep track of the score for both player and dealer,
-
-
-    5 rounds, declaring a match victory, or the user decides to quit.
+    Main function to play the game of Twenty-One.
+    The game continues until either the player or dealer reaches 5 wins,
+    declaring a match victory. 
+    The user can then choose to play again or quit.
     """
     player_wins = 0
     dealer_wins = 0
@@ -247,9 +246,9 @@ def play_twenty_one():
         show_end_of_round(dealer_cards, player_cards, dealer_total, player_total)
 
         result = detect_result(dealer_total, player_total)
-        if result in ['PLAYER', 'DEALER_BUSTED']:
+        if result in ['PLAYER', 'DEALER_is_busted']:
             player_wins += 1
-        elif result in ['DEALER', 'PLAYER_BUSTED']:
+        elif result in ['DEALER', 'PLAYER_is_busted']:
             dealer_wins += 1
 
 
@@ -258,21 +257,24 @@ def play_twenty_one():
 
         # Match check
         if player_wins == MATCH_WIN_COUNT:
-            prompt("You won the match! Even though you will lose in the long run...")
+            prompt("You won the match! Even though you will lose in the long run...\n")
             player_wins = dealer_wins = 0
-            if not play_again():
-                break
-            continue
+            if play_again():
+                time.sleep(PAUSE_TIME)
+                continue
+            break
         if dealer_wins == MATCH_WIN_COUNT:
             prompt("Dealer won the match. Better learn to count cards!")
             player_wins = dealer_wins = 0
-            if not play_again():
-                break
-            continue
-
-        # Ask if user wants to keep playing round-to-round
-        if not play_again():
+            if play_again():
+                time.sleep(PAUSE_TIME)
+                continue
             break
 
+        # Ask if user wants to keep playing round-to-round
+        if play_again():
+            time.sleep(PAUSE_TIME)
+            continue
+        break
 
 play_twenty_one()
